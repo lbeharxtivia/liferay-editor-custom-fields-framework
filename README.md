@@ -2,7 +2,7 @@
 
 The engine behind Liferay Editor Custom Fields. 
 
-You only need this if you are creating a new Liferay Editor Custom Fields package, otherwise it is provided as a dependency on existing ones. You can download a boilerplate for app development at https://github.com/lbeharxtivia/liferay-editor-custom-fields-sample
+You only need this if you are creating a new Liferay Editor Custom Fields package, otherwise it is provided as a dependency on existing ones.
 
 ## Before You Start
 
@@ -12,28 +12,8 @@ If you are creating/appending DOM elements, make sure that you check for an exis
 
 ## Getting Started
 
-- Install @liferay-editor-custom-fields/framework
-  - Make sure the version matches the minor version of Liferay you are using
-  - For example `yarn add @liferay-editor-custom-fields/framework@~7.4.0` for Liferay 7.4.
-- In the index.ts of your app:
-  - Declare the Liferay global object
-  - Import the default exported function from @liferay-editor-custom-fields/framework. You can call it something short like initFramework();
-- Create a default exported function of your own and call that function
-- Write a Liferay.on event subscriber for each event that your app will be using. See the Events section of this document for a list of events.
-
-```
-declare const Liferay;
-
-import initFramework from '@liferay-editor-custom-fields/framework';
-
-const initImageTools: () => void = () => {
-    initFramework();
-    Liferay.on('EditorCustomFields_WebContentFields_OnLoad', ()=>{});
-    Liferay.on('EditorCustomFields_FragmenConfig_OnLoad', ()=>{});
-    Liferay.on('EditorCustomFields_Image_OnChange', ()=>{});
-}
-export default initImageTools;
-```
+- Download the boilerplate starter at https://github.com/lbeharxtivia/liferay-editor-custom-fields-sample
+- See below for available events and helper functions
 
 ## Events
 
