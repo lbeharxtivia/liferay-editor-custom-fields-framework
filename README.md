@@ -6,6 +6,8 @@ The engine behind Liferay Editor Custom Fields.
 
 Any client extension using this framework should not run on a production or pre-prod staging environment. It is only intended for the fragment and web content editors. Any JS that will end up on the page should be elsewhere, either in a separate client extension or in the fragment/web content template.
 
+If you are creating/appending DOM elements, make sure that you check for an existing element to avoid infinite MutationObserver loops.
+
 You only need this if you are creating a new Liferay Editor Custom Fields package, otherwise it is provided as a dependency on existing ones.
 
 ## Getting Started
