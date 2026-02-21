@@ -27,11 +27,17 @@ Use Liferay.on to subscribe to these events:
 
 The helper functions below are available for import in any file. For example, to use the getFieldByLabel helper you would use `import { getFieldByLabel } from "@liferay-editor-custom-fields/framework";`
 
+- `clickFragmentConfigTab(label:string)` - Clicks a tab on the Fragment Configuration screen
 - `debounce(callback:function, wait:number)` - A simple callback function
+- `fragmentConfigLoadingStart()` - Create a overlay with a loading spinner over the active fragment and reduce the opacity of the config panel so we can programatically manipulate it without flicker
+- `fragmentConfigLoadingEnd()` - Remove the overlays
 - `getContentImageInput(label:string)` - Gets the metadata input field associated with the web content image.
+- `getElementByLabel(label:string)` - Gets an element (not an input) by innerText
 - `getFieldByLabel(label:string)` - Uses Xpath to get an input field by its label. Usually used to append a GUI element.
 - `getPreviewImage()` - Gets the preview Image
 - `setReactDomInputValue({fieldEl:element,value:string})` - Sets React DOM input value and triggers an autosave on fragment config
+- `wait(ms)` - (Use `await wait()`) - an async function that pauses the process for a bit. Good for multiple actions on the same input
+- `waitForElement({ parentEl: Element, label: string, searchQuerySelector?: string })` - Starts a Mutation Observer that queries a parent element for a specified selector/innertext combo. Destroys the observer and resolves the promise when it finds it. Times out after 5 seconds.
 
 ## License
 

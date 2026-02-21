@@ -3,11 +3,17 @@ declare const Liferay;
 import { observeFragmentConfig, observeWebContentFields } from "./observers";
 
 export {
+  clickFragmentConfigTab,
   debounce,
+  fragmentConfigLoadingEnd,
+  fragmentConfigLoadingStart,
   getContentImageInput,
+  getElementByLabel,
   getFieldByLabel,
   getPreviewImage,
   setReactDomInputValue,
+  wait,
+  waitForElement,
 } from "./util";
 
 const initFramework: () => void = () => {
