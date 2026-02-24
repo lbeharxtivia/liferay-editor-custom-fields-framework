@@ -4,6 +4,17 @@ The engine behind Liferay Editor Custom Fields.
 
 You only need this if you are creating a new Liferay Editor Custom Fields package, otherwise it is provided as a dependency on existing ones.
 
+## Supported Liferay Versions
+This app supports DXP versions in their premium support phase at the time of this release.
+- 2025 Q4
+- 2025 Q3
+- 2025 Q2
+- 2025 Q1
+- 2024 Q1
+- 7.4
+
+If you need compatibility for older DXP releases, you can create a legacy version with a year that supports the release, and submit a PR.
+
 ## Before You Start
 
 Any client extension using this framework should not run on a production or pre-prod staging environment. It is only intended for the fragment and web content editors. Any JS that will end up on the page should be elsewhere, either in a separate client extension or in the fragment/web content template.
