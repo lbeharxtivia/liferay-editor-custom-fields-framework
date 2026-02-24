@@ -5,9 +5,7 @@ import { ContentType } from "../types/ContentType.type";
 import { debounce, getContentImageInput, getPreviewImage } from "../util";
 
 export const observePreviewImage = (contentType: ContentType) => {
-    if(Liferay.editorCustomFields.imageObserver){
-        Liferay.editorCustomFields.imageObserver.disconnect?.();
-    }
+    Liferay?.editorCustomFields?.imageObserver?.disconnect?.();
     // For when image changes
     const elToObserve = contentType === 'fragment' ? getPreviewImage() : getContentImageInput();
     if (contentType && elToObserve && !Liferay.editorCustomFields.imageObserver) {

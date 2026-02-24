@@ -5,13 +5,11 @@ import { debounce } from "../util";
 import { observePreviewImage } from "./observePreviewImage";
 
 export const observeWebContentFields = () => {
+    Liferay?.editorCustomFields?.webContentObserver?.disconnect?.();
     const fieldsContainerEl: HTMLDivElement = document.querySelector(
         "#_com_liferay_journal_web_portlet_JournalPortlet_fieldsContent",
     );
     if (fieldsContainerEl) {
-        if (Liferay.editorCustomFields.webContentObserver) {
-            Liferay.editorCustomFields.webContentObserver.disconnect?.();
-        }
         const debouncedFieldEvent = debounce(() => {
             observePreviewImage('content');
             fireWebContentFieldsOnLoad();
