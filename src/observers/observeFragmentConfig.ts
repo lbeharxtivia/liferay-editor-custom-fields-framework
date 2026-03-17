@@ -18,7 +18,7 @@ export const observeFragmentConfig = () => {
         }, 500);
         Liferay.editorCustomFields.fragmentObserver = new MutationObserver(debouncedAddButton);
         const observer = Liferay.editorCustomFields.fragmentObserver;
-        const config = { attributes: false, childList: true, subtree: false };
+        const config = { attributes: false, childList: true, subtree: true };
         observer.observe(sidePanelEl, config);
     }
 };
