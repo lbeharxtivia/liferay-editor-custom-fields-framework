@@ -1,5 +1,4 @@
 export const getPreviewImage = () => {
-    console.log('latest version');
     let previewImage: HTMLImageElement | null = null;
     const parentEl: HTMLDivElement = document?.querySelector(
         "#portlet_com_liferay_journal_web_portlet_JournalPortlet, .page-editor__topper.active"
