@@ -5,7 +5,7 @@ export const getPreviewImage = () => {
     );
     if(parentEl) {
         previewImage = parentEl.querySelector(
-            ".page-editor__topper.active img.page-editor__editable, .image-picker-preview>img"
+            ".page-editor__topper.active img.page-editor__editable, lfr-editable.page-editor__editable img, .image-picker-preview>img"
         ) as HTMLImageElement;
     }
     return previewImage;
